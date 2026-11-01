@@ -13,7 +13,7 @@ RAIZ="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 source "$RAIZ/scripts/captura-comun.sh"
 
 SALIDA="$RAIZ/capturas/03-mensaje-personalizado.png"
-IMAGEN="docker.io/nicolasribeiro/cowsay-debian:1.0"
+IMAGEN="docker.io/songbird2026/cowsay-debian:1.0"
 MENSAJE="Hola UTU! Mensaje del usuario"
 
 export DISPLAY="${DISPLAY:-:0}"
