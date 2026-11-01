@@ -1,0 +1,3 @@
+capturas/*.tmp.png
+*.tmp.png
+.DS_Store
