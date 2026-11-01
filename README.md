@@ -6,7 +6,7 @@ sin necesidad de modificar ni reconstruir la imagen.
 
 | | |
 |---|---|
-| **Imagen en Docker Hub** | [`docker.io/nicolasribeiro/cowsay:1.0`](https://hub.docker.com/r/nicolasribeiro/cowsay) |
+| **Imagen en Docker Hub** | [`docker.io/nicolasribeiro/cowsay-debian:1.0`](https://hub.docker.com/r/nicolasribeiro/cowsay-debian) |
 | **Repositorio (código fuente)** | [`github.com/nikolasribeiro/cowsay-docker`](https://github.com/nikolasribeiro/cowsay-docker) |
 | **Etiqueta** | `1.0` |
 | **Arquitectura** | `linux/amd64` |
@@ -62,13 +62,13 @@ Clonar el repositorio y construir la imagen desde la raíz del proyecto:
 ```bash
 git clone https://github.com/nikolasribeiro/cowsay-docker.git
 cd cowsay-docker
-docker build -t docker.io/nicolasribeiro/cowsay:1.0 .
+docker build -t docker.io/nicolasribeiro/cowsay-debian:1.0 .
 ```
 
 Comprobar que la imagen quedó creada:
 
 ```bash
-docker images docker.io/nicolasribeiro/cowsay:1.0
+docker images docker.io/nicolasribeiro/cowsay-debian:1.0
 ```
 
 ---
@@ -78,7 +78,7 @@ docker images docker.io/nicolasribeiro/cowsay:1.0
 ### Con el mensaje predeterminado
 
 ```bash
-docker run --rm docker.io/nicolasribeiro/cowsay:1.0
+docker run --rm docker.io/nicolasribeiro/cowsay-debian:1.0
 ```
 
 Salida:
@@ -99,7 +99,7 @@ Salida:
 Basta con pasar el texto como argumento:
 
 ```bash
-docker run --rm docker.io/nicolasribeiro/cowsay:1.0 "Hola UTU! Mensaje del usuario"
+docker run --rm docker.io/nicolasribeiro/cowsay-debian:1.0 "Hola UTU! Mensaje del usuario"
 ```
 
 Salida:
@@ -121,7 +121,7 @@ Como la imagen expone `cowsay` directamente, también acepta sus banderas
 propias. Por ejemplo, para cambiar la figura:
 
 ```bash
-docker run --rm docker.io/nicolasribeiro/cowsay:1.0 -f tux "Hola con un tux"
+docker run --rm docker.io/nicolasribeiro/cowsay-debian:1.0 -f tux "Hola con un tux"
 ```
 
 ---
@@ -131,23 +131,23 @@ docker run --rm docker.io/nicolasribeiro/cowsay:1.0 -f tux "Hola con un tux"
 No hace falta construir nada: la imagen publicada se puede descargar directamente.
 
 ```bash
-docker pull docker.io/nicolasribeiro/cowsay:1.0
+docker pull docker.io/nicolasribeiro/cowsay-debian:1.0
 ```
 
 Verificar la descarga:
 
 ```bash
-docker images docker.io/nicolasribeiro/cowsay:1.0
+docker images docker.io/nicolasribeiro/cowsay-debian:1.0
 ```
 
 Y ejecutarla:
 
 ```bash
-docker run --rm docker.io/nicolasribeiro/cowsay:1.0 "Gracias por usar nuestra imagen"
+docker run --rm docker.io/nicolasribeiro/cowsay-debian:1.0 "Gracias por usar nuestra imagen"
 ```
 
 La imagen también se puede consultar desde el sitio web de Docker Hub:
-<https://hub.docker.com/r/nicolasribeiro/cowsay>
+<https://hub.docker.com/r/nicolasribeiro/cowsay-debian>
 
 ---
 
@@ -160,10 +160,10 @@ Para actualizar la imagen publicada desde este repositorio:
 docker login docker.io
 
 # 2. Construir
-docker build -t docker.io/nicolasribeiro/cowsay:1.0 .
+docker build -t docker.io/nicolasribeiro/cowsay-debian:1.0 .
 
 # 3. Publicar
-docker push docker.io/nicolasribeiro/cowsay:1.0
+docker push docker.io/nicolasribeiro/cowsay-debian:1.0
 ```
 
 ---

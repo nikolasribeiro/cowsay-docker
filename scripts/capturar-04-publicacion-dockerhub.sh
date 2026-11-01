@@ -16,7 +16,7 @@ RAIZ="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 source "$RAIZ/scripts/captura-comun.sh"
 
 SALIDA="$RAIZ/capturas/04-publicacion-dockerhub.png"
-IMAGEN="docker.io/nicolasribeiro/cowsay:1.0"
+IMAGEN="docker.io/nicolasribeiro/cowsay-debian:1.0"
 
 export DISPLAY="${DISPLAY:-:0}"
 mkdir -p "$RAIZ/capturas"
