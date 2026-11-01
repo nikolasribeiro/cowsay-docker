@@ -1,4 +1,4 @@
-# 🐮 Cowsay — Grupo 3°ML
+# 🐮 Cowsay — Equipo Songbird
 
 Imagen de Docker con [cowsay](https://en.wikipedia.org/wiki/Cowsay) que muestra un
 mensaje predeterminado del equipo y permite al usuario escribir el que quiera,
@@ -15,7 +15,7 @@ sin necesidad de modificar ni reconstruir la imagen.
 
 ## 👥 Equipo
 
-**Grupo 3°ML** — Proyecto Anual 2026
+**Equipo Songbird** — Proyecto Anual 2026
 
 - Juan de la Vega
 - Leandro Conte
@@ -30,7 +30,7 @@ La imagen parte de `debian:bookworm-slim` y le instala el paquete `cowsay`
 mediante `apt-get`. Al ejecutarla, muestra la vaca de cowsay con un mensaje
 dentro del bocadillo.
 
-- **Mensaje por defecto:** `Grupo 3°ML - Proyecto Anual UTU 2026`
+- **Mensaje por defecto:** `Equipo Songbird - Proyecto Anual`
 - **Mensaje del usuario:** se indica como argumento al ejecutar el contenedor y
   reemplaza al predeterminado.
 - **Tamaño aproximado:** 128 MB
@@ -41,7 +41,7 @@ dentro del bocadillo.
 El `Dockerfile` define:
 
 - `ENTRYPOINT ["cowsay"]` — el programa que siempre se ejecuta.
-- `CMD ["Grupo 3°ML - Proyecto Anual UTU 2026"]` — el mensaje por defecto.
+- `CMD ["Equipo Songbird - Proyecto Anual"]` — el mensaje por defecto.
 
 Cuando se ejecuta `docker run IMAGEN "otro mensaje"`, Docker reemplaza el `CMD`
 por el argumento del usuario y mantiene el `ENTRYPOINT`, por lo que `cowsay`
@@ -85,7 +85,7 @@ Salida:
 
 ```
  __
-< Grupo 3°ML - Proyecto Anual UTU 2026  >
+< Equipo Songbird - Proyecto Anual  >
  --
         \   ^__^
          \  (oo)\_______
